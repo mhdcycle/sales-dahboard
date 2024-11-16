@@ -17,7 +17,7 @@ export default function BasicLineChart() {
     }
   };
   return (
-    <Stack sx={{ height: "300px" }}>
+    <Stack sx={{ height: 250 }}>
       <Grid container alignItems={"center"} justifyContent={"space-between"}>
         <Grid>
           <Typography variant="h5">Sales Data</Typography>

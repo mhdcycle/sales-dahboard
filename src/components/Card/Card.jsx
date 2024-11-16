@@ -4,10 +4,12 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
+import EqualizerIcon from '@mui/icons-material/Equalizer';
 
-export default function BasicCard({ cardTitle, value }) {
+export default function BasicCard({ cardTitle, value, percent, bgColor }) {
   return (
-    <Card sx={{ borderRadius: 2 }}>
+    <Card sx={{ borderRadius: 2, backgroundColor:  bgColor}}>
       <CardContent>
         <Typography variant="h5" component="div">
           {cardTitle}
@@ -17,7 +19,9 @@ export default function BasicCard({ cardTitle, value }) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Learn More</Button>
+        <ArrowDropUpIcon /><span>{`+${percent}%`}</span>
+        <EqualizerIcon />
+        {/* <Button size="small">Learn More</Button> */}
       </CardActions>
     </Card>
   );

@@ -5,7 +5,7 @@ import { desktopOS, valueFormatter } from "./dataset.ts";
 
 export default function PieActiveArc() {
   return (
-    <Stack sx={{width: "100%"}}>
+    <Stack sx={{ height: 250 }}>
       <PieChart
         series={[
           {
@@ -15,7 +15,7 @@ export default function PieActiveArc() {
             valueFormatter,
           },
         ]}
-        height={300}
+        // height={1200}
         // width={300}
       />
     </Stack>
