@@ -13,20 +13,20 @@ export default function DashboardLayoutBasic(props) {
       rowSpacing={{ xs: 4, lg: 4 }}
     >
       <Grid
-        size={{ sm: 12, lg: 6, md: 12 }}
+        size={{ sm: 12, lg: 6, md: 12, xs: 12 }}
         sx={{ p: 2, boxShadow: "5px 5px 10px 10px lightgray", borderRadius: 2 }}
       >
         <PieActiveArc />
       </Grid>
       <Grid
-        size={{ sm: 12, lg: 6, md: 12 }}
+        size={{ sm: 12, lg: 6, md: 12, xs: 12 }}
         sx={{ p: 2, boxShadow: "5px 5px 10px 10px lightgray", borderRadius: 2 }}
       >
         <BasicLineChart />
       </Grid>
       <Grid
         size={12}
-        sx={{ boxShadow: "5px 5px 10px 10px lightgray", borderRadius: 4 }}
+        sx={{ borderRadius: 4 }}
       >
         <SalesTable />
       </Grid>

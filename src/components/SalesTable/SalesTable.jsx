@@ -77,6 +77,7 @@ export default function SalesTable() {
     fieldSeparator: ",",
     decimalSeparator: ".",
     useKeysAsHeaders: true,
+    filename: "sales_data",
   });
 
   const handleExportData = () => {
@@ -90,11 +91,17 @@ export default function SalesTable() {
         //export all data that is currently in the table (ignore pagination, sorting, filtering, etc.)
         onClick={handleExportData}
         startIcon={<FileDownloadIcon />}
-        sx={{ float: "right", p: 2, color: "black" }}
+        sx={{
+          float: "right",
+          px: 2,
+          color: "black",
+          border: "1px solid gray",
+          borderRadius: 4,
+        }}
       >
         Export to CSV
       </Button>
-      <Paper sx={{ width: "100%", overflow: "hidden" }}>
+      <Paper sx={{ width: "100%", overflow: "hidden", marginTop: "50px" }}>
         <TableContainer sx={{ maxHeight: 440 }}>
           <Table stickyHeader aria-label="sticky table">
             <TableHead>

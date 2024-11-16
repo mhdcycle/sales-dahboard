@@ -5,7 +5,8 @@ import { DashboardLayout, PageContainer } from "@toolpad/core";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import { useDemoRouter } from "@toolpad/core/internal";
-import { createTheme, Typography } from "@mui/material";
+import { createTheme } from "@mui/material";
+import InputForm from "./components/Form/InputForm";
 
 const NAVIGATION = [
   {
@@ -38,9 +39,9 @@ function App() {
       }}
     >
       <DashboardLayout>
-        <PageContainer>
+        <PageContainer title={router.pathname === "/dashboard" ? "Sales Dashboard" : "Order Form"}>
           {router.pathname === "/dashboard" && <DashboardLayoutBasic />}
-          {router.pathname === "/orders" && <Typography variant="h2">Reports</Typography>}
+          {router.pathname === "/orders" && <InputForm />}
         </PageContainer>
       </DashboardLayout>
     </AppProvider>
