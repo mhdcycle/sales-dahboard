@@ -7,7 +7,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
-import { Button } from "@mui/material";
+import { Button, Stack } from "@mui/material";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import { mkConfig, generateCsv, download } from "export-to-csv";
 
@@ -86,22 +86,24 @@ export default function SalesTable() {
   };
 
   return (
-    <React.Fragment>
+    <Stack>
       <Button
         //export all data that is currently in the table (ignore pagination, sorting, filtering, etc.)
         onClick={handleExportData}
         startIcon={<FileDownloadIcon />}
         sx={{
-          float: "right",
+          placeSelf: "end",
           px: 2,
-          color: "black",
-          border: "1px solid gray",
-          borderRadius: 4,
+          py: 1,
+          width: 200,
+          borderRadius: 2,
         }}
+        color="success"
+        variant="contained"
       >
         Export to CSV
       </Button>
-      <Paper sx={{ width: "100%", overflow: "hidden", marginTop: "50px" }}>
+      <Paper sx={{ width: "100%", overflow: "hidden", marginTop: "10px" }}>
         <TableContainer sx={{ maxHeight: 440 }}>
           <Table stickyHeader aria-label="sticky table">
             <TableHead>
@@ -155,6 +157,6 @@ export default function SalesTable() {
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
       </Paper>
-    </React.Fragment>
+    </Stack>
   );
 }
