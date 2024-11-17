@@ -38,14 +38,13 @@ function App() {
         title: "ABC Corporation",
       }}
     >
-      <DashboardLayout>
+      <DashboardLayout sidebarExpandedWidth={250}>
         <PageContainer title={router.pathname === "/dashboard" ? "Sales Dashboard" : "Order Form"}>
           {router.pathname === "/dashboard" && <DashboardLayoutBasic />}
           {router.pathname === "/orders" && <InputForm />}
         </PageContainer>
       </DashboardLayout>
     </AppProvider>
-    // <DashboardLayoutBasic />
   );
 }
 

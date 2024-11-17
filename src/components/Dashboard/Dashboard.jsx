@@ -23,13 +23,18 @@ export default function DashboardLayoutBasic(props) {
             size={{ lg: 3, md: 6, sm: 12, xs: 12 }}
             sx={{ borderRadius: 4 }}
           >
-            <BasicCard cardTitle={item.cardTitle} value={item.value} percent={item.percent} bgColor={item.bgColor} />
+            <BasicCard
+              cardTitle={item.cardTitle}
+              value={item.value}
+              percent={item.percent}
+              bgColor={item.bgColor}
+            />
           </Grid>
         );
       })}
       <Grid
         size={{ sm: 12, lg: 6, md: 12, xs: 12 }}
-        sx={{py: 2, boxShadow: "2px 2px 5px 3px lightgray", borderRadius: 2 }}
+        sx={{ py: 2, boxShadow: "2px 2px 5px 3px lightgray", borderRadius: 2 }}
       >
         <PieActiveArc />
       </Grid>

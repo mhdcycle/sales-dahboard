@@ -103,7 +103,7 @@ export default function SalesTable() {
       >
         Export to CSV
       </Button>
-      <Paper sx={{ width: "100%", overflow: "hidden", marginTop: "10px" }}>
+      <Paper sx={{ width: "100%", marginTop: "10px" }}>
         <TableContainer sx={{ maxHeight: 440 }}>
           <Table stickyHeader aria-label="sticky table">
             <TableHead>
